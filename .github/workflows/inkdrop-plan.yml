@@ -56,7 +56,7 @@ jobs:
       - name: Terraform
         working-directory: ${{ inputs.terraform_relative_dir }}
         run: |
-          terraform init
+          terraform init -backend=false
 
       - name: Configure git
         run: |
